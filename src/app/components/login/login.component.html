@@ -1,14 +1,19 @@
-<div>
-    <h2>Login into your account</h2>
-    <form [formGroup]="loginForm" (ngSubmit)="printValues($event)">
-        <div>
-            <label for="">Email</label>
-            <input type="email" placeholder="user@example.com" formControlName="email"/>
+<div class="container">
+    <div class="login-background"></div>
+    <div class="login-container">
+        <div class="form-container">
+            <h2>Login into your account</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="printValues($event)">
+                <div class="login-input">
+                    <label for="">Email</label>
+                    <input type="email" placeholder="user@example.com" formControlName="email"/>
+                </div>
+                <div class="login-input">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="********" formControlName="password"/>
+                </div>
+            </form>
+            <button type="submit">Login now</button>
         </div>
-        <div>
-            <label for="">Password</label>
-            <input type="password" placeholder="********" formControlName="password"/>
-        </div>
-        <button>Login now</button>
-    </form>
+    </div>
 </div>
